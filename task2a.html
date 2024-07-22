@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Hero Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)); /* Adjust the overlay effect */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="hero-content text-center">
+                        <h1>Welcome to Our Landing Page</h1>
+                        <p>Your journey to amazing experiences begins here.</p>
+                        <a href="#learn-more" class="btn btn-custom">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="learn-more" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>Tata Consultancy Services (TCS) is a global leader in IT services, consulting, and business solutions, providing innovative solutions to help clients achieve their digital transformation goals.</p>
+                <p>With a diverse team of over 500,000 consultants across the globe, TCS leverages its deep domain expertise, digital capabilities, and collaborative approach to deliver value to customers in various industries.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Our Services</h2>
+                <p>Tata Consultancy Services (TCS) offers a wide range of IT services and solutions, including:</p>
+                <ul>
+                    <li><strong>Consulting:</strong> Business consulting, IT strategy, and operations consulting.</li>
+                    <li><strong>Digital Transformation:</strong> Digital strategy, digital marketing, and customer experience.</li>
+                    <li><strong>IT Services:</strong> Application development, maintenance, and support.</li>
+                    <li><strong>Cloud Services:</strong> Cloud strategy, migration, and managed services.</li>
+                    <li><strong>Analytics & AI:</strong> Data analytics, machine learning, and artificial intelligence solutions.</li>
+                    <li><strong>Cybersecurity:</strong> Security consulting, implementation, and managed security services.</li>
+                    <li><strong>Enterprise Solutions:</strong> ERP, CRM, and supply chain management solutions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="container py-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Contact Us</h2>
+                <form id="contact-form" method="post" action="#">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
